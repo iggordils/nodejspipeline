@@ -14,7 +14,7 @@ node {
      }
    }                   
    stage('Docker Build & Push') {
-     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+     docker.withRegistry('https://registry.hub.docker.com', 'b89adc2e-5b0b-4806-bbec-6441513f0f84') {
       def nuestraapp = docker.build("igordils/nodejsapp:${gitcommit}", ".")
       nuestraapp.push()
      }
